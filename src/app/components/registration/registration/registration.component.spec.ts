@@ -186,7 +186,7 @@ describe('Testing registration component', () => {
     expect(component.alertMessage).toBe(errorMsg); 
   });
 
-  it('Should populate alert Type as danger alert and contain error message ', () => {
+  it('Should populate alert Type as success alert and contain success message ', () => {
     let successMsg =  'test for valid error msg';
     component.showSuccessMsg(successMsg);
     expect(component.alertType).toBe('alert-success');
