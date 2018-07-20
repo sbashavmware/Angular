@@ -24,6 +24,10 @@ Run `ng test -sm=false` to execute the unit tests via [Karma](https://karma-runn
 
 Run `npm run test-e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
+## Running Code coverage
+
+Run `ng test -cc` to execute the code coverage.
+
 ## Features Implemented
 
 coverage --istanbul reporter
