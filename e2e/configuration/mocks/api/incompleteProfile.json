@@ -1,0 +1,83 @@
+{
+  "expression": "api\/incompleteProfile",
+  "method": "GET",
+  "name": "customerAuth",
+  "isArray": true,
+  "responses": {
+    "complete": {
+      "default": true,
+      "status": 200,
+      "headers": {
+        "content-type": "application/json"
+      },
+      "data": {
+        "status": "COMPLETE",
+        "traceId": "b15ddbdbcbb6339e",
+        "emailAddress": "RA-QATEST33@vmware.com",
+        "timestamp": "1482923311",
+        "message": "Profile Complete"
+      }
+    },
+    "incomplete": {
+      "default": true,
+      "status": 200,
+      "headers": {
+        "content-type": "application/json"
+      },
+      "data": {
+        "errorId": "INCOMPLETE-PROFILE",
+        "status": "E",
+        "traceId": "b15ddbdbcbb6339e",
+        "emailAddress": "RA-QATEST33@vmware.com",
+        "timestamp": "1482923311",
+        "message": "User profile is incomplete"
+      }
+    },
+    "inactive": {
+      "default": true,
+      "status": 200,
+      "headers": {
+        "content-type": "application/json"
+      },
+      "data": {
+        "errorId": "INACTIVE_EMAILADDRESS",
+        "status": "S",
+        "traceId": "b15ddbdbcbb6339e",
+        "emailAddress": "RA-QATEST33@vmware.com",
+        "timestamp": "1482923311",
+        "message": "Invaid User Profile"
+      }
+    },
+    "invalid": {
+      "default": true,
+      "status": 200,
+      "headers": {
+        "content-type": "application/json"
+      },
+      "data": {
+        "status": "E",
+        "traceId": "c6e56bf365d1ec28",
+        "errorCode": "INVALID_CREDENTIALS",
+        "errorMessage": "Invalid Email address or Password"
+      }
+    },
+    "error": {
+      "default": true,
+      "status": 200,
+      "headers": {
+        "content-type": "application/json"
+      },
+      "data": {
+        "errorId": "INVALID_CREDENTIALS",
+        "status": "E",
+        "traceId": "b15ddbdbcbb6339e",
+        "emailAddress": "RA-QATEST33@vmware.com",
+        "timestamp": "1482923311",
+        "errorMessage": "Invaid Username or Password"
+      }
+    },
+    "failed": {
+      "status": 401
+    }
+  }
+}

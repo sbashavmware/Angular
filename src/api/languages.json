@@ -1,0 +1,7 @@
+{
+    "languageList":
+    [
+        { "name": "ENGLISH", "locale": "en" },
+        { "name": "FRENCH", "locale": "fr" }
+    ]
+}

@@ -1,0 +1,49 @@
+<div class="reg-page-container container" >
+
+        <div> 
+                <clr-alert [clrAlertType]="alertType" *ngIf="isAlertVisible" (clrAlertClosedChange)="onClose()" >
+                    <div class="alert-item">
+                        <span class="alert-text">{{alertMessage}}</span>
+                    </div>
+                </clr-alert> 
+        </div>
+
+
+
+        <!--  [(clrFilterValue)]="patientname" for column default value sorting--> 
+        Selected users: <span *ngFor="let patient of selected">{{patient.name}}</span>
+        <!-- Selected user: <span class="username" *ngIf="selectedUser">{{selectedUser.name}}</span> -->
+        <clr-datagrid [(clrDgSelected)]="selected">
+                <!-- <clr-datagrid [(clrDgSingleSelected)]="selectedUser" [clDgRowSelection]="true"></clr-datagrid> -->
+                <clr-dg-column [clrDgField]="'id'"> patient id</clr-dg-column>
+                <clr-dg-column [clrDgField]="'name'" >patient name</clr-dg-column>
+                <clr-dg-column [clrDgField]="'age'">patient Age</clr-dg-column>
+                <clr-dg-column [clrDgField]="'address'">patient address</clr-dg-column>
+                <clr-dg-column [clrDgField]="'city'">patient city</clr-dg-column>
+                <clr-dg-column [clrDgField]="'email'">patient email</clr-dg-column>
+                <clr-dg-column [clrDgField]="'phoneNumber'">patient phoneNumber</clr-dg-column>
+                <clr-dg-column [clrDgField]="'reasonForVisit'">patient reasonForVisit</clr-dg-column>
+                    
+
+
+
+                <clr-dg-row *clrDgItems="let patient of patientDetails" [clrDgItem]="patient">
+                    <clr-dg-cell>{{patient.id}}</clr-dg-cell>
+                    <clr-dg-cell>{{patient.name}}</clr-dg-cell>
+                    <clr-dg-cell>{{patient.age}}</clr-dg-cell>
+                    <clr-dg-cell>{{patient.address}}</clr-dg-cell>
+                    <clr-dg-cell>{{patient.city}}</clr-dg-cell>
+                    <clr-dg-cell>{{patient.email}}</clr-dg-cell>
+                    <clr-dg-cell>{{patient.phoneNumber}}</clr-dg-cell>
+                    <clr-dg-cell>{{patient.reasonForVisit}}</clr-dg-cell>
+                </clr-dg-row>
+            
+            <clr-dg-footer>
+                    <clr-dg-pagination #pagination [clrDgPageSize]="2">
+                            {{pagination.firstItem + 1}} - {{pagination.lastItem + 1}}
+                            of {{pagination.totalItems}}  
+                        </clr-dg-pagination>
+                </clr-dg-footer>
+            </clr-datagrid>
+</div>
+

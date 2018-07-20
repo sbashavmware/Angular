@@ -1,0 +1,15 @@
+<p>
+  patient works!
+</p>
+<div>
+    <a class="nav-link" href="#" [routerLink]="['./patient-detail']" routerLinkActive="active"><span class="nav-text">PatientDetail</span></a>
+    <a class="nav-link" href="#" [routerLink]="['./new-patient']" routerLinkActive="active"><span class="nav-text">NewPatient</span></a>
+    <a class="nav-link" href="#" [routerLink]="['./patient-view']" routerLinkActive="active"><span class="nav-text">ViewPatients</span></a>
+</div>
+
+
+<div class="content-container">
+    <div class="content-area">
+      <router-outlet></router-outlet>
+    </div>
+  </div>

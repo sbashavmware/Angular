@@ -1,0 +1,38 @@
+{
+  "expression": "api\/confirmEmail$",
+  "method": "GET",
+  "name": "confirmEmail",
+  "isArray": true,
+  "responses": {
+    "success": {
+      "default": true,
+      "status": 200,
+      "headers": {
+        "content-type": "application/json"
+      },
+      "data": {
+        "status": "S",
+        "traceId": "b15ddbdbcbb6339e",
+        "emailAddress": "RA-QATEST33@vmware.com",
+        "timestamp": "1482923311",
+        "message": "Email updated successfully!"
+      }
+    },
+    "error": {
+      "default": true,
+      "status": 200,
+      "headers": {
+        "content-type": "application/json"
+      },
+      "data": {
+        "status": "E",
+        "message": "Invalid Password!",
+        "errorCode": "UPDATE-ERR-1",
+        "traceId": "13f52c85ad2f2d1"
+      }
+    },
+    "failed": {
+      "status": 401
+    }
+  }
+}

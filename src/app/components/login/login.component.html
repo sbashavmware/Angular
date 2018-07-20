@@ -1,0 +1,26 @@
+<div class="login-wrapper">
+  <form class="login" (submit)="login($event)" [formGroup]="loginForm">
+      <section class="title">
+          <h3 class="loginTitle">{{ 'loginTitle' | translate:lang }}</h3>
+          <h5 class="hint">{{'loginHint' | translate :lang}}</h5>
+      </section>
+      <div class="login-group">
+          <label for="username"  role="tooltip"  [ngClass]="{invalid: (loginForm.controls.loginName.touched && loginForm.controls.loginName?.errors)}" class="tooltip tooltip-validation tooltip-sm">
+                <input class="username" type="text" id="username" placeholder="Username" formControlName="loginName">
+                <span class="tooltip-content" *ngIf="(loginForm.controls.loginName.touched && loginForm.controls.loginName?.errors?.invalidEmailAddress)">
+                    <span>{{ 'emailNotValid' | translate:lang }}</span>
+                </span>
+         </label>
+
+         <label for="password">
+            <input class="password" type="password" id="login_password"  placeholder="Password" formControlName="loginPassword">
+         </label>
+         
+          <div class="error active" *ngIf="isError">
+              {{ 'emailFormSubmitErrorMsg' | translate:lang}}
+          </div>
+          <button  type="submit" class="btn btn-primary" [disabled]="!loginForm.valid">NEXT</button>
+          <a [routerLink]="['/registration']" class="signup">{{ 'registerHere' | translate:lang}}</a>
+      </div>
+  </form>
+</div>

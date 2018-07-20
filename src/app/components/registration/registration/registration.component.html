@@ -1,0 +1,148 @@
+<div class="reg-page-container container" >
+<div id="submiterrormsg" #submiterrormsgele>
+    <clr-alert [clrAlertType]="alertType" *ngIf="isAlertVisible" (clrAlertClosedChange)="onClose()" >
+        <div class="alert-item">
+            <span class="alert-text">{{alertMessage}}</span>
+        </div>
+    </clr-alert>
+</div>
+<h1 class="heading">
+  {{ 'registration' | translate: lang }}
+</h1>
+
+
+
+
+<div role="main" class="row col-xs-12">
+    <form  autocomplete="off" role="form" 
+    class="registration-form" (submit)="saveUserProfile($event)" [formGroup]="registrationForm" method="POST"
+    #formInput>
+    <section class="form-block">
+        
+        <div class="form-group">
+            <label for="firstName">{{ 'firstnamelbl' | translate : lang}}</label>
+            <label for="firstName" aria-haspopup="true" role="tooltip"  [ngClass]="{invalid: (registrationForm.controls.firstName.touched && registrationForm.controls.firstName?.errors)}" class="tooltip tooltip-validation tooltip-sm">
+                <input autofocus formControlName="firstName" id="firstName" type="text" placeholder="" #firstNameInput >
+                <span class="tooltip-content" *ngIf="(registrationForm.controls.firstName.touched && registrationForm.controls.firstName.errors && registrationForm.controls.firstName.errors?.required)">
+                    <span>{{ 'required' | translate:lang }}</span>
+                </span>
+            </label>
+        </div> 
+
+        <div class="form-group">
+            <label for="lastName">{{ 'lastnamelbl' | translate : lang}}</label>
+            <label for="lastName" aria-haspopup="true" role="tooltip"  [ngClass]="{invalid: (registrationForm.controls.lastName.touched && registrationForm.controls.lastName?.errors)}" class="tooltip tooltip-validation tooltip-sm">
+                <input  formControlName="lastName" id="lastName" type="text" placeholder="" #lastNameInput >
+                <span class="tooltip-content" *ngIf="(registrationForm.controls.lastName.touched && registrationForm.controls.lastName.errors && registrationForm.controls.lastName.errors?.required)">
+                    <span>{{ 'required' | translate:lang }}</span>
+                </span>
+            </label>
+        </div> 
+
+        <div class="form-group">
+            <label for="company">{{ 'companylbl' | translate : lang}}</label>
+            <label for="company" aria-haspopup="true" role="tooltip"  [ngClass]="{invalid: (registrationForm.controls.company.touched && registrationForm.controls.company?.errors)}" class="tooltip tooltip-validation tooltip-sm">
+                <input  formControlName="company" id="company" type="text" placeholder="" #companyinput >
+                <span class="tooltip-content" *ngIf="(registrationForm.controls.company.touched && registrationForm.controls.company.errors && registrationForm.controls.company.errors?.required)">
+                    <span>{{ 'required' | translate:lang }}</span>
+                </span>
+            </label>
+            </div>
+
+
+        <div class="form-group">
+            <label for="country" class="required">{{ 'countrylbl' | translate : lang}}</label>
+            <label for="country" aria-haspopup="true" role="tooltip"  [ngClass]="{invalid: (registrationForm.controls.country.touched && registrationForm.controls.country?.errors)}" class="tooltip tooltip-validation tooltip-sm">
+                <div class="select">
+                    <select id="country" name="country" formControlName="country" [(ngModel)]="selectedCountry"
+                        #country (change)="fetchstates()">
+                        <option *ngFor="let country of countries" [ngValue]="country">{{country.countryName}}</option>
+                    </select>
+                </div>
+                <span class="tooltip-content" *ngIf="(registrationForm.controls.country.touched && registrationForm.controls.country.errors && registrationForm.controls.country.errors?.required)">
+                    <span>{{ 'required' | translate:lang }}</span>
+                </span>
+            </label>
+        </div>
+
+        <div class="form-group">
+                <label for="state" class="required">{{ 'stateProvlbl' | translate : lang}}</label>
+                <div *ngIf="isStateFetching" class="inline-block">
+                    <span class="spinner spinner-inline"> </span>
+                </div>
+                <div class="select" *ngIf="!isStateFetching">
+                    <select class="" id="state" name="state" formControlName="state" [(ngModel)]="selectedState" #state>
+                        <option *ngFor="let state of states" [ngValue]="state">{{state.stateName}}</option>
+                    </select>
+                </div>
+        </div>
+    
+
+        <div class="form-group">
+            <label for="address1" >{{ 'addr1lbl' | translate : lang}}</label>
+            <label for="address1" aria-haspopup="true" role="tooltip"  [ngClass]="{invalid: (registrationForm.controls.address1.touched && registrationForm.controls.address1?.errors)}" class="tooltip tooltip-validation tooltip-sm">
+                <input  formControlName="address1" id="address1" type="text" placeholder="" #address1Input >
+                <span class="tooltip-content" *ngIf="(registrationForm.controls.address1.touched && registrationForm.controls.address1.errors && registrationForm.controls.address1.errors?.required)">
+                    <span>{{ 'required' | translate:lang }}</span>
+                </span>
+                <span class="tooltip-content" *ngIf="(registrationForm.controls.address1.touched && registrationForm.controls.address1.errors && registrationForm.controls.address1.errors?.minlength)">
+                    <span>{{ 'twoCharsRequiredValidation' | translate:lang }}</span>
+                </span>
+            </label>
+        </div>
+
+        <div class="form-group">
+            <label for="address2" >{{ 'addr2lbl' | translate : lang}}</label>
+            <label for="address2" aria-haspopup="true" role="tooltip"  [ngClass]="{invalid: (registrationForm.controls.address2.touched && registrationForm.controls.address2?.errors)}" class="tooltip tooltip-validation tooltip-sm">
+                <input  formControlName="address2" id="address2" type="text" placeholder="" #address2Input >
+                <span class="tooltip-content" *ngIf="(registrationForm.controls.address2.touched && registrationForm.controls.address2.errors && registrationForm.controls.address2.errors?.required)">
+                    <span>{{ 'required' | translate:lang }}</span>
+                </span>
+            </label>
+        </div>
+
+        <div class="form-group">
+            <label for="city" class="required">{{ 'cityLbl' | translate : lang}}</label>
+            <label for="city" aria-haspopup="true" role="tooltip"  [ngClass]="{invalid: (registrationForm.controls.city.touched && registrationForm.controls.city?.errors)}" class="tooltip tooltip-validation tooltip-sm">
+                <input  formControlName="city" id="city" type="text" placeholder="" #cityinput >
+                <span class="tooltip-content" *ngIf="(registrationForm.controls.city.touched && registrationForm.controls.city.errors && registrationForm.controls.city.errors?.required)">
+                    <span>{{ 'required' | translate:lang }}</span>
+                </span>
+            </label>
+        </div>
+
+  
+        <div class="form-group">
+                <label for="phone" class="required">{{ 'phoneLbl' | translate : lang}}</label>
+                <label for="phone" aria-haspopup="true" role="tooltip"  [ngClass]="{invalid: (registrationForm.controls.phone.touched && registrationForm.controls.phone?.errors)}" class="tooltip tooltip-validation tooltip-sm">
+                    <input  formControlName="phone" id="phone" type="text" placeholder="" #phoneinput >
+                    <span class="tooltip-content" *ngIf="(registrationForm.controls.phone.touched && registrationForm.controls.phone.errors && registrationForm.controls.phone.errors?.invalidPhoneNumber)">
+                        <span>{{ 'phoneNumberInValid' | translate:lang }}</span>
+                    </span>
+                </label>
+            </div>
+
+        <div class="checkbox-div">
+              
+                <div class="form-group checkbox-div">
+                        <clr-checkbox formControlName="termsCheckbox" name="termsCheckbox" id="termsCheckbox" [(ngModel)]="termsAgreement">
+                            I agree to the terms and conditions outlined in the
+                            <a href="https://www.vmware.com//download/eula/myvmware_tou.htmlf" target="_blank">VMware Terms of Use Agreement</a>
+                        </clr-checkbox>
+                    </div>
+        </div>
+
+
+
+       <div class="form-group"> 
+
+      
+                
+        <button class="btn btn-primary" id="saveUserDet" [ngClass]="{submitdisabled : (regRespisFetching || !registrationForm.valid)}"
+        [disabled]="regRespisFetching || !registrationForm.valid">{{ 'submitBtnTxt' | translate : lang}} </button>
+       </div>
+        
+    </section>
+  </form>
+</div>
+</div>

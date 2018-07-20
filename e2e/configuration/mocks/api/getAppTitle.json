@@ -1,0 +1,22 @@
+{
+  "expression": "api\/getAppTitle",
+  "method": "GET",
+  "name": "title",
+  "isArray": true,
+  "responses": {
+    "success": {
+      "default": true,
+      "status": 200,
+      "headers": {
+        "content-type": "application/json"
+      },
+      "data": {
+        "traceId": "5a642b6f1337841a",
+        "appTitle": "Mocked Patient Management App Title"
+      }
+    },
+    "failed": {
+      "status": 401
+    }
+  }
+}

@@ -1,0 +1,50 @@
+<clr-main-container>
+  <!-- Header Area -->  
+  <clr-header *ngIf = "config.showHeader">
+    <div class="branding">
+      <a href="#" class="nav-link">
+        <span class="clr-icon clr-clarity-logo"></span>
+        <span class="title">{{ 'appTitle' | translate:lang }}</span>
+      </a>
+    </div>
+   
+    <div class="header-nav" [clr-nav-level]="1">
+        <a class="nav-link" href="#" [routerLink]="['/login']" routerLinkActive="active"><span class="nav-text">{{'loginLinkText' | translate:lang}}</span></a>   
+    </div>
+
+    <div class="header-actions">
+        <a class="nav-link language-link" (click)="showLanguageModal();"><span class="nav-text">{{'languageText' | translate:lang}}</span></a>
+        <clr-modal [(clrModalOpen)]="isModalOpen">   
+            <div class="modal-body">
+                   <div class="row">
+                       <div class="col-md-6">
+                            <div class="card">
+                                    <div class="card-block">
+                                        <div class="card-title" style="color:blueviolet;font-size: 20px;">
+                                                {{ 'languageselect' | translate:lang }}
+                                        </div>  
+                                    </div>
+                                </div>
+                       </div>
+                       <div class="col-md-6">
+                            <ul class="list-unstyled">
+                            <li *ngFor="let language of languageList"> <button class="btn btn-link" (click)="selectLocale(language.locale)" >{{language.name}}</button></li>
+                            </ul>
+                       </div>
+                   </div>             
+            </div>
+            <div class="modal-footer">
+            </div>
+        </clr-modal>    
+    </div>
+  </clr-header>
+
+
+  <!--Main Container-->
+  <div class="content-container">
+      <div class="content-area">
+          <router-outlet></router-outlet>
+      </div>
+  </div>
+</clr-main-container>
+ 

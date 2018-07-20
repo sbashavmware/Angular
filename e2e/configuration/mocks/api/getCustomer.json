@@ -1,0 +1,48 @@
+{
+    "expression": "api\/getCustomer",
+    "method": "GET",
+    "name": "getCustomer",
+    "isArray": true,
+    "responses": {
+        "success": {
+            "default": true,
+            "status": 200,
+            "headers": {
+                "content-type": "application/json"
+            },
+            "data": {
+                "firstname": "Brandon",
+                "lastname": "Tedder",
+                "address1": "1940 North Monroe Street",
+                "city": "TALLAHASSEE",
+                "state": "FL",
+                "country": "US",
+                "email": "WEBQATEST03@VMWARE.COM",
+                "company": "NSRC",
+                "zipcode": "32399",
+                "tradeid": "csp_1501751143",
+                "customerNumber": "8074820595",
+                "workPhone": "0403366998",
+                "jobrole": "50000281",
+                "department": "50000029",
+                "customerType": "ACTIVE",
+                "status": "S",
+                "traceId": "3ef5690f5446066b"
+            }
+        },
+        "error": {
+            "default": true,
+            "status": 200,
+            "headers": {
+                "content-type": "application/json"
+            },
+            "data": {
+                "status": "E",
+                "message": "Error "
+            }
+        },
+        "failed": {
+            "status": 401
+        }
+    }
+}

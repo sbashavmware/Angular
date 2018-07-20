@@ -1,0 +1,33 @@
+{
+    "expression": "api\/saveUserProfile",
+    "method": "POST",
+    "name": "saveUserProfile",
+    "isArray": true,
+    "responses": {
+        "success": {
+            "default": true,
+            "status": 200,
+            "headers": {
+                "content-type": "application/json"
+            },
+            "data": {
+                "status": "S",
+                "message": "User Profile Updated Successfully!"
+            }
+        },
+        "error": {
+            "default": true,
+            "status": 200,
+            "headers": {
+                "content-type": "application/json"
+            },
+            "data": {
+                "status": "E",
+                "errorMessage": "Error while saving user profile"
+            }
+        },
+        "failed": {
+            "status": 401
+        }
+    }
+}

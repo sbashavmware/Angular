@@ -1,0 +1,49 @@
+{
+    "expression": "api\/generateKeySuccess",
+    "method": "GET",
+    "name": "generateKey",
+    "isArray": true,
+    "responses": {
+        "success": {
+            "default": true,
+            "status": 200,
+            "headers": {
+                "content-type": "application/json"
+            },
+            "data": {
+                "status": "S",
+                "traceId": "fbed2c10ea62ecdc",
+                "key": "k9qw57mkrO73eaHC0p0QrcJgW%2BjdMohXSGWQTXDYLyk%3D"
+            }
+        },
+        "error": {
+            "default": true,
+            "status": 200,
+            "headers": {
+                "content-type": "application/json"
+            },
+            "data": {
+                "status": "E",
+                "traceId": "e3e26c627acb121c",
+                "errorCode": "ENCODE-ERR-1",
+                "errorMessage": "There is no key to encode!"
+            }
+        },
+        "noCustomer": {
+            "default": true,
+            "status": 200,
+            "headers": {
+                "content-type": "application/json"
+            },
+            "data": {
+                "status": "E",
+                "traceId": "6158abfa8d169a53",
+                "errorCode": "API_ERR_005",
+                "errorMessage": "No Customer data found for the provided details."
+            }
+        },
+        "failed": {
+            "status": 401
+        }
+    }
+}

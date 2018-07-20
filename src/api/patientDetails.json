@@ -1,0 +1,54 @@
+{
+    "patientDetails" : [
+        {
+            "id" : 1,
+            "name" : "kohli",
+           "age" :25,
+            "address" :" Greenlands Navi mumbai",
+            "city":"Mumbai",
+            "email": "kohli@gmail.com",
+           "phoneNumber":"123456789",
+           "reasonForVisit":"High Fever"
+        },
+        {
+            "id" : 2,
+            "name" : "rohit",
+           "age" :26,
+            "address" :" Greenlands Delhi",
+            "city":"delhi",
+            "email": "rohit@gmail.com",
+           "phoneNumber":"123456789",
+           "reasonForVisit":"High Fever"
+        },
+        {
+            "id" : 3,
+            "name" : "rahul",
+           "age" :28,
+            "address" :" Greenlands bangalore",
+            "city":"bangalore",
+            "email": "rahul@gmail.com",
+           "phoneNumber":"123456789",
+           "reasonForVisit":"High Fever"
+        },
+        {
+            "id" : 4,
+            "name" : "naidu",
+           "age" :25,
+            "address" :" Greenlands hyderabad",
+            "city":"Hyderabad",
+            "email": "naidu@gmail.com",
+           "phoneNumber":"123456789",
+           "reasonForVisit":"High Fever"
+        },
+        {
+            "id" : 5,
+            "name" : "dhawan",
+           "age" :29,
+            "address" :" Greenlands Dhawan",
+            "city":"dhawan",
+            "email": "dhawan@gmail.com",
+           "phoneNumber":"123456789",
+           "reasonForVisit":"High Fever"
+        }
+    ]
+}

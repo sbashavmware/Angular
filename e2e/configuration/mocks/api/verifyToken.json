@@ -1,0 +1,45 @@
+{
+  "expression": "api\/verifyToken.json",
+  "method": "GET",
+  "name": "verifyToken",
+  "isArray": true,
+  "responses": {
+    "success": {
+      "default": true,
+      "status": 200,
+      "headers": {
+        "content-type": "application/json"
+      },
+      "data": {
+        "status": "S",
+        "message": "Token is valid."
+      }
+    },
+    "expired": {
+      "default": true,
+      "status": 200,
+      "headers": {
+        "content-type": "application/json"
+      },
+      "data": {
+        "status": "E",
+        "message": "Token is invalid.",
+        "errorCode": "INVALID_TOKEN"
+      }
+    },
+    "invalid": {
+      "default": true,
+      "status": 200,
+      "headers": {
+        "content-type": "application/json"
+      },
+      "data": {
+        "status": "E",
+        "message": "Unable to process your request"
+      }
+    },
+    "failed": {
+      "status": 401
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "expression": "api\/validUser$",
+  "method": "GET",
+  "name": "validUser",
+  "isArray": true,
+  "responses": {
+    "success": {
+      "default": true,
+      "status": 200,
+      "headers": {
+        "content-type": "application/json"
+      },
+      "data": {
+        "status": "S",
+        "traceId": "b15ddbdbcbb6339e",
+        "emailAddress": "RA-QATEST33@vmware.com",
+        "timestamp": "1482923311",
+        "message": "Valid User"
+      }
+    },
+    "failed": {
+      "status": 401
+    }
+  }
+}

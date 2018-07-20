@@ -1,0 +1,15 @@
+{
+    "expression": "api\/telemetry",
+    "method": "POST",
+    "name": "telemetry",
+    "isArray": true,
+    "responses": {
+        "success": {
+            "default": true,
+            "status": 200
+        },
+        "failed": {
+            "status": 401
+        }
+    }
+}

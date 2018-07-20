@@ -1,0 +1,264 @@
+{
+    "expression": "api\/state$",
+    "method": "GET",
+    "name": "list",
+    "isArray": true,
+    "responses": {
+        "success": {
+            "default": true,
+            "status": 200,
+            "headers": {
+                "content-type": "application/json"
+            },
+            "data": {
+                "status": "S",
+                "traceid": "6c124809cd86abef",
+                "stateList": [
+                    {
+                        "stateName": "Armed Forces Americas",
+                        "stateCode": "AA"
+                    },
+                    {
+                        "stateName": "Armed Forces - AE",
+                        "stateCode": "AE"
+                    },
+                    {
+                        "stateName": "Alaska",
+                        "stateCode": "AK"
+                    },
+                    {
+                        "stateName": "Alabama",
+                        "stateCode": "AL"
+                    },
+                    {
+                        "stateName": "Armed Forces Pacific",
+                        "stateCode": "AP"
+                    },
+                    {
+                        "stateName": "Arkansas",
+                        "stateCode": "AR"
+                    },
+                    {
+                        "stateName": "American Samoa",
+                        "stateCode": "AS"
+                    },
+                    {
+                        "stateName": "Arizona",
+                        "stateCode": "AZ"
+                    },
+                    {
+                        "stateName": "California",
+                        "stateCode": "CA"
+                    },
+                    {
+                        "stateName": "Colorado",
+                        "stateCode": "CO"
+                    },
+                    {
+                        "stateName": "Connecticut",
+                        "stateCode": "CT"
+                    },
+                    {
+                        "stateName": "District Of Columbia",
+                        "stateCode": "DC"
+                    },
+                    {
+                        "stateName": "Delaware",
+                        "stateCode": "DE"
+                    },
+                    {
+                        "stateName": "Florida",
+                        "stateCode": "FL"
+                    },
+                    {
+                        "stateName": "Federated States of Micronesia",
+                        "stateCode": "FM"
+                    },
+                    {
+                        "stateName": "Georgia",
+                        "stateCode": "GA"
+                    },
+                    {
+                        "stateName": "Guam",
+                        "stateCode": "GU"
+                    },
+                    {
+                        "stateName": "Hawaii",
+                        "stateCode": "HI"
+                    },
+                    {
+                        "stateName": "Iowa",
+                        "stateCode": "IA"
+                    },
+                    {
+                        "stateName": "Idaho",
+                        "stateCode": "ID"
+                    },
+                    {
+                        "stateName": "Illinois",
+                        "stateCode": "IL"
+                    },
+                    {
+                        "stateName": "Indiana",
+                        "stateCode": "IN"
+                    },
+                    {
+                        "stateName": "Kansas",
+                        "stateCode": "KS"
+                    },
+                    {
+                        "stateName": "Kentucky",
+                        "stateCode": "KY"
+                    },
+                    {
+                        "stateName": "Louisiana",
+                        "stateCode": "LA"
+                    },
+                    {
+                        "stateName": "Massachusetts",
+                        "stateCode": "MA"
+                    },
+                    {
+                        "stateName": "Maryland",
+                        "stateCode": "MD"
+                    },
+                    {
+                        "stateName": "Maine",
+                        "stateCode": "ME"
+                    },
+                    {
+                        "stateName": "Marshall Islands",
+                        "stateCode": "MH"
+                    },
+                    {
+                        "stateName": "Michigan",
+                        "stateCode": "MI"
+                    },
+                    {
+                        "stateName": "Minnesota",
+                        "stateCode": "MN"
+                    },
+                    {
+                        "stateName": "Missouri",
+                        "stateCode": "MO"
+                    },
+                    {
+                        "stateName": "Northern Mariana Islands",
+                        "stateCode": "MP"
+                    },
+                    {
+                        "stateName": "Mississippi",
+                        "stateCode": "MS"
+                    },
+                    {
+                        "stateName": "Montana",
+                        "stateCode": "MT"
+                    },
+                    {
+                        "stateName": "North Carolina",
+                        "stateCode": "NC"
+                    },
+                    {
+                        "stateName": "North Dakota",
+                        "stateCode": "ND"
+                    },
+                    {
+                        "stateName": "Nebraska",
+                        "stateCode": "NE"
+                    },
+                    {
+                        "stateName": "New Hampshire",
+                        "stateCode": "NH"
+                    },
+                    {
+                        "stateName": "New Jersey",
+                        "stateCode": "NJ"
+                    },
+                    {
+                        "stateName": "New Mexico",
+                        "stateCode": "NM"
+                    },
+                    {
+                        "stateName": "Nevada",
+                        "stateCode": "NV"
+                    },
+                    {
+                        "stateName": "New York",
+                        "stateCode": "NY"
+                    },
+                    {
+                        "stateName": "Ohio",
+                        "stateCode": "OH"
+                    },
+                    {
+                        "stateName": "Oklahoma",
+                        "stateCode": "OK"
+                    },
+                    {
+                        "stateName": "Oregon",
+                        "stateCode": "OR"
+                    },
+                    {
+                        "stateName": "Pennsylvania",
+                        "stateCode": "PA"
+                    },
+                    {
+                        "stateName": "Puerto Rico",
+                        "stateCode": "PR"
+                    },
+                    {
+                        "stateName": "Rhode Island",
+                        "stateCode": "RI"
+                    },
+                    {
+                        "stateName": "South Carolina",
+                        "stateCode": "SC"
+                    },
+                    {
+                        "stateName": "South Dakota",
+                        "stateCode": "SD"
+                    },
+                    {
+                        "stateName": "Tennessee",
+                        "stateCode": "TN"
+                    },
+                    {
+                        "stateName": "Texas",
+                        "stateCode": "TX"
+                    },
+                    {
+                        "stateName": "Utah",
+                        "stateCode": "UT"
+                    },
+                    {
+                        "stateName": "Virginia",
+                        "stateCode": "VA"
+                    },
+                    {
+                        "stateName": "Vermont",
+                        "stateCode": "VT"
+                    },
+                    {
+                        "stateName": "Washington",
+                        "stateCode": "WA"
+                    },
+                    {
+                        "stateName": "Wisconsin",
+                        "stateCode": "WI"
+                    },
+                    {
+                        "stateName": "West Virginia",
+                        "stateCode": "WV"
+                    },
+                    {
+                        "stateName": "Wyoming",
+                        "stateCode": "WY"
+                    }
+                ]
+            }
+        },
+        "failed": {
+            "status": 401
+        }
+    }
+}

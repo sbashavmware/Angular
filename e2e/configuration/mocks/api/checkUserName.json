@@ -1,0 +1,36 @@
+{
+    "expression": "api\/checkUserName$",
+    "method": "GET",
+    "name": "checkUserName",
+    "isArray": true,
+    "responses": {
+        "success": {
+            "default": true,
+            "status": 200,
+            "headers": {
+                "content-type": "application/json"
+            },
+            "data": {
+                "status": "S",
+                "message": "Email address valid."
+            }
+        },
+        "error": {
+            "default": true,
+            "status": 200,
+            "headers": {
+                "content-type": "application/json"
+            },
+            "data": {
+                "emailAddress": null,
+                "displayName": null,
+                "message": "Emailaddress should not be empty!",
+                "errorId": "EMAILADDRESS_EMPTY",
+                "valid": false
+            }
+        },
+        "failed": {
+            "status": 401
+        }
+    }
+}

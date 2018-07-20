@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>Unit Tests - A sample project description</title>
+    <style type="text/css">html,body{font-family:Arial,sans-serif;font-size:1rem;margin:0;padding:0;}body{padding:10px 40px;}h1{margin-bottom:0;}h2{margin-top:0;margin-bottom:0;color:#999;}table{width:100%;margin-top:20px;margin-bottom:20px;table-layout:fixed;}tr.header{background:#ddd;font-weight:bold;border-bottom:none;}td{padding:7px;border-top:none;border-left:1px black solid;border-bottom:1px black solid;border-right:none;word-break:break-all;word-wrap:break-word;}tr.pass td{color:#003b07;background:#86e191;}tr.skip td{color:#7d3a00;background:#ffd24a;}tr.fail td{color:#5e0e00;background:#ff9c8a;}tr:first-child td{border-top:1px black solid;}td:last-child{border-right:1px black solid;}tr.overview{font-weight:bold;color:#777;}tr.overview td{padding-bottom:0px;border-bottom:none;}tr.system-out td{color:#777;}tr.system-errors td{color:#f00;}hr{height:2px;margin:30px 0;background:#000;border:none;}section{margin-top:40px;}h3{margin:6px 0;}.overview{color:#333;font-weight:bold;}.system-out{margin:0.4rem 0;}.system-errors{color:#a94442}.spec{padding:0.8rem;margin:0.3rem 0;}.spec--pass{color:#3c763d;background-color:#dff0d8;border:1px solid #d6e9c6;}.spec--skip{color:#8a6d3b;background-color:#fcf8e3;border:1px solid #faebcc;}.spec--fail{color:#a94442;background-color:#f2dede;border:1px solid #ebccd1;}.spec--group{color:#636363;background-color:#f0f0f0;border:1px solid #e6e6e6;margin:0;}.spec--group:not(:first-of-type){margin:20px 0 0 0;}.spec__title{display:inline;}.spec__suite{display:inline;}.spec__descrip{font-weight:normal;}.spec__status{float:right;}.spec__log{padding-left: 2.3rem;}.hidden{display:none;}body.compact .spec p{margin-top:0;margin-bottom:0.5rem;}body.compact .spec,body.compact tr,body.compact .overview,body.compact .system-out,body.compact .system-errors{font-size:0.85rem;}body.compact .spec{padding:0.3rem 0.5rem;}body.compact section{margin-top:30px;}</style>
+  </head>
+  <body class="compact">
+    <h1>Unit Tests</h1>
+    <h2>A sample project description</h2>
+    <table cellspacing="0" cellpadding="0" border="0">
+      <tr class="overview">
+        <td colspan="3" title="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36">Browser: Chrome 67.0.3396 (Windows 10.0.0)</td>
+      </tr>
+      <tr class="overview">
+        <td colspan="3">Timestamp: 2018-7-19 16:31:13</td>
+      </tr>
+      <tr>
+        <td colspan="3">
+          49 tests / 
+          0 errors / 
+          0 failures / 
+          0 skipped / 
+          runtime: 17.512s
+        </td>
+      </tr>
+      <tr class="header">
+        <td>Status</td>
+        <td>Spec</td>
+        <td>Suite / Results</td>
+      </tr>
+      <tr class="pass">
+        <td>Passed in 0.929s</td>
+        <td>should create the app component</td>
+        <td>AppComponent</td>
+      </tr>
+      <tr class="pass">
+        <td>Passed in 0.826s</td>
+        <td> Should assign title as VMware Cloud Services </td>
+        <td>AppComponent</td>
+      </tr>
+      <tr class="pass">
+        <td>Passed in 0.732s</td>
+        <td> Should assign languages to the application </td>
+        <td>AppComponent</td>
+      </tr>
+      <tr class="pass">
+        <td>Passed in 0.63s</td>
+        <td>navigate to "login" takes you to /login</td>
+        <td>AppComponent</td>
+      </tr>
+      <tr class="pass">
+        <td>Passed in 0.752s</td>
+        <td>navigate to "patient" takes you to /patient</td>
+        <td>AppComponent</td>
+      </tr>
+      <tr class="pass">
+        <td>Passed in 0.91s</td>
+        <td>navigate to "registration" takes you to /registration</td>
+        <td>AppComponent</td>
+      </tr>
+      <tr class="pass">
+        <td>Passed in 0.627s</td>
+        <td> Should open the language modal on language click </td>
+        <td>AppComponent</td>
+      </tr>
+      <tr class="pass">
+        <td>Passed in 0.603s</td>
+        <td> Should call the locale function for language set </td>
+        <td>AppComponent</td>
+      </tr>
+      <tr class="pass">
+        <td>Passed in 0.268s</td>
+        <td>Should contain the initial state of login form as invalid because the form is empty</td>
+        <td>LoginComponent</td>
+      </tr>
+      <tr class="pass">
+        <td>Passed in 0.331s</td>
+        <td>Should throw error if invalid email is provided  </td>
+        <td>LoginComponent</td>
+      </tr>
+      <tr class="pass">
+        <td>Passed in 0.266s</td>
+        <td>Should not error if valid email is provided  </td>
+        <td>LoginComponent</td>
+      </tr>
+      <tr class="pass">
+        <td>Passed in 0.291s</td>
+        <td>Should validate if user login is successful  </td>
+        <td>LoginComponent</td>
+      </tr>
+      <tr class="pass">
+        <td>Passed in 0.328s</td>
+        <td>Should show error message is user login response is failure</td>
+        <td>LoginComponent</td>
+      </tr>
+      <tr class="pass">
+        <td>Passed in 0.27s</td>
+        <td>should create</td>
+        <td>PatientDetailComponent</td>
+      </tr>
+      <tr class="pass">
+        <td>Passed in 0.289s</td>
+        <td>Should fetch the patient details</td>
+        <td>PatientViewComponent</td>
+      </tr>
+      <tr class="pass">
+        <td>Passed in 0.302s</td>
+        <td>Should populate alert Type as danger alert and contain error message </td>
+        <td>PatientViewComponent</td>
+      </tr>
+      <tr class="pass">
+        <td>Passed in 0.281s</td>
+        <td>Should populate alert Type as success alert and contain success message </td>
+        <td>PatientViewComponent</td>
+      </tr>
+      <tr class="pass">
+        <td>Passed in 0.262s</td>
+        <td>Should fetch the patient details</td>
+        <td>PatientViewComponent error Msg failure Test</td>
+      </tr>
+      <tr class="pass">
+        <td>Passed in 0.343s</td>
+        <td>Should contain the initial state of registration form as invalid because the form is empty</td>
+        <td>Testing registration component</td>
+      </tr>
+      <tr class="pass">
+        <td>Passed in 0.297s</td>
+        <td>Should have required validation as the first Name field is empty </td>
+        <td>Testing registration component</td>
+      </tr>
+      <tr class="pass">
+        <td>Passed in 0.291s</td>
+        <td>Should not have required validation as the first Name field value is testForNotEmpty </td>
+        <td>Testing registration component</td>
+      </tr>
+      <tr class="pass">
+        <td>Passed in 0.291s</td>
+        <td>Should call error msg when country list response failure  </td>
+        <td>Testing registration component</td>
+      </tr>
+      <tr class="pass">
+        <td>Passed in 0.283s</td>
+        <td>Should fetch the states when we change the country  </td>
+        <td>Testing registration component</td>
+      </tr>
+      <tr class="pass">
+        <td>Passed in 0.301s</td>
+        <td>Should call error msg when state list response failure  </td>
+        <td>Testing registration component</td>
+      </tr>
+      <tr class="pass">
+        <td>Passed in 0.284s</td>
+        <td>Should contain invalidPhoneNumber error when we set the invalid phone number </td>
+        <td>Testing registration component</td>
+      </tr>
+      <tr class="pass">
+        <td>Passed in 0.305s</td>
+        <td>Should not contain invalidPhoneNumber error when we set the valid phone number </td>
+        <td>Testing registration component</td>
+      </tr>
+      <tr class="pass">
+        <td>Passed in 0.327s</td>
+        <td>Should populate alert Type as danger alert and contain error message </td>
+        <td>Testing registration component</td>
+      </tr>
+      <tr class="pass">
+        <td>Passed in 0.292s</td>
+        <td>Should populate alert Type as danger alert and contain error message </td>
+        <td>Testing registration component</td>
+      </tr>
+      <tr class="pass">
+        <td>Passed in 0.298s</td>
+        <td>Should save the User Profile on save operation  </td>
+        <td>Testing registration component</td>
+      </tr>
+      <tr class="pass">
+        <td>Passed in 0.281s</td>
+        <td>Should save the User Profile on save operation  </td>
+        <td>Testing registration component</td>
+      </tr>
+      <tr class="pass">
+        <td>Passed in 0.298s</td>
+        <td>Should do not show the alert on close operation  </td>
+        <td>Testing registration component</td>
+      </tr>
+      <tr class="pass">
+        <td>Passed in 0.657s</td>
+        <td>Should get all the default languages assigned </td>
+        <td>AppLanguageService testing</td>
+      </tr>
+      <tr class="pass">
+        <td>Passed in 0.248s</td>
+        <td>Should Assign the title of the application with successful config title response </td>
+        <td>AppTitleService for successful config response</td>
+      </tr>
+      <tr class="pass">
+        <td>Passed in 0.203s</td>
+        <td>Should Assign the title of the application with invalid response and assign default title to app</td>
+        <td>AppTitleService with invalid config response</td>
+      </tr>
+      <tr class="pass">
+        <td>Passed in 0.203s</td>
+        <td>Should Assign the title of the application with error response and assign the default title to app </td>
+        <td>AppTitleService Error response</td>
+      </tr>
+      <tr class="pass">
+        <td>Passed in 0.208s</td>
+        <td>Should return the observable when we call the getTitle Observable method </td>
+        <td>AppTitleService Error response</td>
+      </tr>
+      <tr class="pass">
+        <td>Passed in 0.255s</td>
+        <td>Should get the login details on login </td>
+        <td>AuthService for login Testing</td>
+      </tr>
+      <tr class="pass">
+        <td>Passed in 0.599s</td>
+        <td>Should return the save response for the user details on save operation </td>
+        <td>AuthService for saveUserProfile Testing</td>
+      </tr>
+      <tr class="pass">
+        <td>Passed in 0.276s</td>
+        <td>Should get the country details </td>
+        <td>CountryListService testing</td>
+      </tr>
+      <tr class="pass">
+        <td>Passed in 0.583s</td>
+        <td>Should get the patient details </td>
+        <td>PatientView Service testing</td>
+      </tr>
+      <tr class="pass">
+        <td>Passed in 0.02s</td>
+        <td>should verify the get request api call</td>
+        <td>Testing the rest Api Service </td>
+      </tr>
+      <tr class="pass">
+        <td>Passed in 0.009s</td>
+        <td>should verify the post request api call</td>
+        <td>Testing the rest Api Service </td>
+      </tr>
+      <tr class="pass">
+        <td>Passed in 0.005s</td>
+        <td>should verify the put request api call</td>
+        <td>Testing the rest Api Service </td>
+      </tr>
+      <tr class="pass">
+        <td>Passed in 0.01s</td>
+        <td>should verify the  delete request api call</td>
+        <td>Testing the rest Api Service </td>
+      </tr>
+      <tr class="pass">
+        <td>Passed in 0.222s</td>
+        <td>Should get the state details </td>
+        <td>StateService testing</td>
+      </tr>
+      <tr class="pass">
+        <td>Passed in 0.305s</td>
+        <td>Should validate the phone number and return the response as null </td>
+        <td>Testing the patients Service </td>
+      </tr>
+      <tr class="pass">
+        <td>Passed in 0.318s</td>
+        <td>Should validate the phone number and return the response as invalid </td>
+        <td>Testing the patients Service </td>
+      </tr>
+      <tr class="pass">
+        <td>Passed in 0.303s</td>
+        <td>Should validate the email and return the response as null </td>
+        <td>Testing the patients Service </td>
+      </tr>
+      <tr class="pass">
+        <td>Passed in 0.3s</td>
+        <td>Should validate the email  and return the response as invalid </td>
+        <td>Testing the patients Service </td>
+      </tr>
+      <tr class="system-out">
+        <td colspan="3"><strong>System output:</strong><br />Chrome 67.0.3396 (Windows 10.0.0) ERROR: 'Unhandled Promise rejection:', 'Cannot find module ./components/patient/patient.module#PatientModule', '; Zone:', 'ProxyZone', '; Task:', 'Promise.then', '; Value:', Error{__zone_symbol__currentTask: ZoneTask{_zone: Zone{_properties: ..., _parent: ..., _name: ..., _zoneDelegate: ...}, runCount: 0, _zoneDelegates: null, _state: 'notScheduled', type: 'microTask', source: 'Promise.then', data: undefined, scheduleFn: undefined, cancelFn: null, callback: function () { ... }, invoke: function () { ... }}}, 'Error: Cannot find module ./components/patient/patient.module#PatientModule
+    at SpyNgModuleFactoryLoader.load (webpack:///C:/Sameer/work/ng/clarity/PatientManagement/node_modules/@angular/router/esm5/testing.js?:108:53)
+    at RouterConfigLoader.loadModuleFactory (webpack:///C:/Sameer/work/ng/clarity/PatientManagement/node_modules/@angular/router/esm5/router.js?:4542:122)
+    at RouterConfigLoader.load (webpack:///C:/Sameer/work/ng/clarity/PatientManagement/node_modules/@angular/router/esm5/router.js?:4522:52)
+    at MergeMapSubscriber.eval [as project] (webpack:///C:/Sameer/work/ng/clarity/PatientManagement/node_modules/@angular/router/esm5/router.js?:2077:115)
+    at MergeMapSubscriber._tryNext (webpack:///C:/Sameer/work/ng/clarity/PatientManagement/node_modules/rxjs/_esm5/operators/mergeMap.js?:133:27)
+    at MergeMapSubscriber._next (webpack:///C:/Sameer/work/ng/clarity/PatientManagement/node_modules/rxjs/_esm5/operators/mergeMap.js?:123:18)
+    at MergeMapSubscriber.Subscriber.next (webpack:///C:/Sameer/work/ng/clarity/PatientManagement/node_modules/rxjs/_esm5/Subscriber.js?:96:18)
+    at ScalarObservable._subscribe (webpack:///C:/Sameer/work/ng/clarity/PatientManagement/node_modules/rxjs/_esm5/observable/ScalarObservable.js?:53:24)
+    at ScalarObservable.Observable._trySubscribe (webpack:///C:/Sameer/work/ng/clarity/PatientManagement/node_modules/rxjs/_esm5/Observable.js?:178:25)
+    at ScalarObservable.Observable.subscribe (webpack:///C:/Sameer/work/ng/clarity/PatientManagement/node_modules/rxjs/_esm5/Observable.js?:166:65)'
+<br />Chrome 67.0.3396 (Windows 10.0.0) ERROR: 'Unhandled Promise rejection:', 'Cannot find module ./components/patient/patient.module#PatientModule', '; Zone:', 'ProxyZone', '; Task:', 'Promise.then', '; Value:', Error{__zone_symbol__currentTask: ZoneTask{_zone: Zone{_properties: ..., _parent: ..., _name: ..., _zoneDelegate: ...}, runCount: 0, _zoneDelegates: null, _state: 'notScheduled', type: 'microTask', source: 'Promise.then', data: undefined, scheduleFn: undefined, cancelFn: null, callback: function () { ... }, invoke: function () { ... }}}, 'Error: Cannot find module ./components/patient/patient.module#PatientModule
+    at SpyNgModuleFactoryLoader.load (webpack:///C:/Sameer/work/ng/clarity/PatientManagement/node_modules/@angular/router/esm5/testing.js?:108:53)
+    at RouterConfigLoader.loadModuleFactory (webpack:///C:/Sameer/work/ng/clarity/PatientManagement/node_modules/@angular/router/esm5/router.js?:4542:122)
+    at RouterConfigLoader.load (webpack:///C:/Sameer/work/ng/clarity/PatientManagement/node_modules/@angular/router/esm5/router.js?:4522:52)
+    at MergeMapSubscriber.eval [as project] (webpack:///C:/Sameer/work/ng/clarity/PatientManagement/node_modules/@angular/router/esm5/router.js?:2077:115)
+    at MergeMapSubscriber._tryNext (webpack:///C:/Sameer/work/ng/clarity/PatientManagement/node_modules/rxjs/_esm5/operators/mergeMap.js?:133:27)
+    at MergeMapSubscriber._next (webpack:///C:/Sameer/work/ng/clarity/PatientManagement/node_modules/rxjs/_esm5/operators/mergeMap.js?:123:18)
+    at MergeMapSubscriber.Subscriber.next (webpack:///C:/Sameer/work/ng/clarity/PatientManagement/node_modules/rxjs/_esm5/Subscriber.js?:96:18)
+    at ScalarObservable._subscribe (webpack:///C:/Sameer/work/ng/clarity/PatientManagement/node_modules/rxjs/_esm5/observable/ScalarObservable.js?:53:24)
+    at ScalarObservable.Observable._trySubscribe (webpack:///C:/Sameer/work/ng/clarity/PatientManagement/node_modules/rxjs/_esm5/Observable.js?:178:25)
+    at ScalarObservable.Observable.subscribe (webpack:///C:/Sameer/work/ng/clarity/PatientManagement/node_modules/rxjs/_esm5/Observable.js?:166:65)'
+<br />Chrome 67.0.3396 (Windows 10.0.0) ERROR: 'Unhandled Promise rejection:', 'Cannot match any routes. URL Segment: 'patient/patient-view'', '; Zone:', 'ProxyZone', '; Task:', 'Promise.then', '; Value:', Error{__zone_symbol__currentTask: ZoneTask{_zone: Zone{_properties: ..., _parent: ..., _name: ..., _zoneDelegate: ...}, runCount: 0, _zoneDelegates: null, _state: 'notScheduled', type: 'microTask', source: 'Promise.then', data: undefined, scheduleFn: undefined, cancelFn: null, callback: function () { ... }, invoke: function () { ... }}}, 'Error: Cannot match any routes. URL Segment: 'patient/patient-view'
+    at ApplyRedirects.noMatchError (webpack:///C:/Sameer/work/ng/clarity/PatientManagement/node_modules/@angular/router/esm5/router.js?:1781:16)
+    at CatchSubscriber.eval [as selector] (webpack:///C:/Sameer/work/ng/clarity/PatientManagement/node_modules/@angular/router/esm5/router.js?:1746:29)
+    at CatchSubscriber.error (webpack:///C:/Sameer/work/ng/clarity/PatientManagement/node_modules/rxjs/_esm5/operators/catchError.js?:108:31)
+    at MapSubscriber.Subscriber._error (webpack:///C:/Sameer/work/ng/clarity/PatientManagement/node_modules/rxjs/_esm5/Subscriber.js?:135:26)
+    at MapSubscriber.Subscriber.error (webpack:///C:/Sameer/work/ng/clarity/PatientManagement/node_modules/rxjs/_esm5/Subscriber.js?:109:18)
+    at MapSubscriber.Subscriber._error (webpack:///C:/Sameer/work/ng/clarity/PatientManagement/node_modules/rxjs/_esm5/Subscriber.js?:135:26)
+    at MapSubscriber.Subscriber.error (webpack:///C:/Sameer/work/ng/clarity/PatientManagement/node_modules/rxjs/_esm5/Subscriber.js?:109:18)
+    at MapSubscriber.Subscriber._error (webpack:///C:/Sameer/work/ng/clarity/PatientManagement/node_modules/rxjs/_esm5/Subscriber.js?:135:26)
+    at MapSubscriber.Subscriber.error (webpack:///C:/Sameer/work/ng/clarity/PatientManagement/node_modules/rxjs/_esm5/Subscriber.js?:109:18)
+    at LastSubscriber.Subscriber._error (webpack:///C:/Sameer/work/ng/clarity/PatientManagement/node_modules/rxjs/_esm5/Subscriber.js?:135:26)'
+</td>
+      </tr>
+    </table>
+    <hr/>
+  </body>
+</html>
