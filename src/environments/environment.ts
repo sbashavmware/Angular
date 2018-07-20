@@ -14,6 +14,5 @@ export const environment = {
          'submitUserDet' : '/api/saveUserProfile.json',
          'fetchPatientDetails' : '/api/patientDetails.json',
          'languagesList' : '/api/languages.json'
-
   }
 };

@@ -212,7 +212,7 @@ describe('Testing registration component', () => {
   });
 
 
-  it('Should save the User Profile on save operation  ', () => {
+  it('Should capture error Response for User Profile on save operation  ', () => {
     
     let errorResponse = {status: 404}; 
     mockAuthService.saveUserProfile.and.returnValue(Observable.throw(errorResponse));
@@ -239,5 +239,8 @@ describe('Testing registration component', () => {
      expect(component.isAlertVisible).toBe(false);
   })
 
+  afterEach(() => {
+    fixture.destroy();
+  });
  
 });

@@ -42,7 +42,11 @@ describe('PatientDetailComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('should create patient detail component', () => {
     expect(component).toBeTruthy();
+  });
+
+  afterEach(() => {
+    fixture.destroy();
   });
 });

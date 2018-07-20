@@ -2,7 +2,7 @@ import { RegisterProfilePage } from '../page-objects/register-profile.po';
 import { TestConstants } from '../test-constants';
 import { browser } from 'protractor';
 
-describe('Patient Management Complete Profile', () => {
+describe('Patient Management register Profile', () => {
    let page: RegisterProfilePage;
     const ngApimock: any = browser['ngApimock'];
 
@@ -10,7 +10,7 @@ describe('Patient Management Complete Profile', () => {
         page = new RegisterProfilePage();
     });
 
-    it('should display Complete Profile heading', () => {
+    it('should display register Profile heading', () => {
         page.navigateTo();
         expect(page.getHeadingText()).toEqual(TestConstants.REGISTER_PROFILE_HEADER);
     }); 
@@ -51,7 +51,7 @@ describe('Patient Management Complete Profile', () => {
 
    
 
-   it('should show success message when save profile api fails', () => {
+   it('should show success message when save profile api success', () => {
                 page.setInputFieldText(page.getFirstNameInput(), TestConstants.FIRST_NAME);
                 page.setInputFieldText(page.getLastNameInput(), TestConstants.LAST_NAME);
                 page.setInputFieldText(page.getCompanyInput(), TestConstants.COMPANY);

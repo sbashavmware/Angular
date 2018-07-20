@@ -12,7 +12,7 @@ import 'rxjs/add/operator/catch';
 import 'rxjs/add/observable/throw';
 import { Config } from '../../config.provider';
 
-describe('PatientViewComponent', () => {
+describe('PatientViewComponent Testing', () => {
   let component: PatientViewComponent;
   let fixture: ComponentFixture<PatientViewComponent>;
   let mockPatientViewService;
@@ -152,10 +152,14 @@ describe('PatientViewComponent error Msg failure Test', () => {
     component = fixture.componentInstance;
   });
 
-  it('Should fetch the patient details', () => {
+  it('Should fetch the error Response ', () => {
     mockPatientViewService1.fetchPatients.and.returnValue(Observable.throw(errorResponse));
     fixture.detectChanges();
     expect(component.errorDetails).toEqual(errorResponse);
+  });
+
+  afterEach(() => {
+    fixture.destroy();
   });
  
 });

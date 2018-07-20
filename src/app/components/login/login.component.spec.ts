@@ -16,7 +16,7 @@ import 'rxjs/add/observable/throw';
 
 
 
-describe('LoginComponent', () => {
+describe('LoginComponent Testing', () => {
   let component: LoginComponent;
   let mockAuthService;
   let loginResponse = {
@@ -115,6 +115,10 @@ describe('LoginComponent', () => {
     passwordField.setValue('test');
     component.login();
     expect(component.errorMessage).toBe(errorResponse);
+  });
+
+  afterEach(() => {
+    fixture.destroy();
   });
 });
  

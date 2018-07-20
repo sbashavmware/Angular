@@ -13,7 +13,7 @@ import { RestApi } from "./restapi.service";
 import { Config } from "../config.provider";
 import { LoginComponent } from "../components/login/login.component";
 import { RouterTestingModule } from "../../../node_modules/@angular/router/testing";
-describe('Testing the patients Service ',() => {
+describe('Testing the validation Service ',() => {
     let regComponent;
     let loginComponent;
     

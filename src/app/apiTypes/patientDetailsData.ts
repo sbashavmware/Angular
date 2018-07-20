@@ -1,3 +1,6 @@
+/*
+ * IpatientDetails inteface used to capture the information about the list of patients
+ */
 export interface IPatientDetails {
     patientDetails : Array<IPatientData>;
 }

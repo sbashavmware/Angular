@@ -20,7 +20,7 @@ import { By } from '../../node_modules/@angular/platform-browser';
 import { BrowserAnimationsModule } from '../../node_modules/@angular/platform-browser/animations';
 import { toBase64String } from '../../node_modules/@angular/compiler/src/output/source_map';
 
-describe('AppComponent', () => {
+describe('AppComponent Testing ', () => {
 
     let fixture: ComponentFixture<any>;
     let mockAppTitleService;
@@ -83,7 +83,7 @@ describe('AppComponent', () => {
                 TranslationService,
             ]
         }).compileComponents();
-        mockAppTitleService.getTitleObservable.and.returnValue(of('VMware Cloud Services'));
+        mockAppTitleService.getTitleObservable.and.returnValue(of('Patient Management App'));
         mockLanguageService.getAppLanguages.and.returnValue(of(LANGUAGES));
         fixture = TestBed.createComponent(AppComponent);
         app = fixture.debugElement.componentInstance;
@@ -100,8 +100,8 @@ describe('AppComponent', () => {
         expect(app).toBeTruthy();
     });
  
-    it(` Should assign title as VMware Cloud Services `, () => {
-        expect(app.appTitle).toEqual('VMware Cloud Services');
+    it(` Should assign title as Patient Management App `, () => {
+        expect(app.appTitle).toEqual('Patient Management App');
     });
 
     it(` Should assign languages to the application `, () => {
@@ -123,8 +123,8 @@ describe('AppComponent', () => {
 
 
     it('navigate to "registration" takes you to /registration', () => {
-        router.navigate(['patient']).then(() => {
-            expect(location.path()).toBe('/patient');
+        router.navigate(['registration']).then(() => {
+            expect(location.path()).toBe('/registration');
        });
     });
 

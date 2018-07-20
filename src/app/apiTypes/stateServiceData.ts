@@ -1,3 +1,6 @@
+/*
+ * IStateList interface used to capture the list of state details
+ */
 export interface IStateList {
     stateList : Array<IStateData>;
 }

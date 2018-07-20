@@ -13,7 +13,7 @@ module.exports = function (config) {
             require('karma-remap-istanbul'),
             require('karma-jasmine-html-reporter'),
             require('karma-coverage-istanbul-reporter'),      
-            require('karma-htmlfile-reporter'),
+            require('karma-html-detailed-reporter'),
             require('@angular/cli/plugins/karma')
         ],
         files: [
@@ -39,23 +39,18 @@ module.exports = function (config) {
             environment: 'dev'
         },
         reporters: config.angularCli && config.angularCli.codeCoverage
-            ? ['mocha', 'karma-remap-istanbul','progress', 'html']
-            : ['mocha','progress', 'html'],
-        htmlReporter: {
-            outputFile: 'coverage/tests/patientManagement.html',
-                    
-            // Optional
-            pageTitle: 'Patient Management',
-            subPageTitle: 'Patient Management Unit Test cases',
-            groupSuites: true,
-            useCompactStyle: true,
-            useLegacyStyle: true
+            ? ['mocha', 'karma-remap-istanbul','progress', 'htmlDetailed']
+            : ['mocha','progress', 'htmlDetailed'],
+        // Optionally, configure the reporter
+        htmlDetailed: {
+            splitResults: true,
+            dir:'./coverage/tests'
         },
         port: 9876,
         colors: true,
         logLevel: config.LOG_INFO,
         autoWatch: true,
         browsers: ['Chrome'],
-        singleRun: false
+        singleRun: true
     });
 };

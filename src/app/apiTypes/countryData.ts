@@ -1,3 +1,6 @@
+/*
+ * ICountry interface used to capture the list of countries 
+ */
 export interface ICountry {
     status : string;
     countryList : Array<country>;

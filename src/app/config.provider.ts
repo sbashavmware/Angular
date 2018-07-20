@@ -1,3 +1,4 @@
+//Config provider holds all the default configurations and properties
 import { Injectable } from "@angular/core";
 import { environment } from "../environments/environment";
 
