@@ -6,18 +6,18 @@ import 'rxjs/add/operator/map'
 import { IPatientDetails } from '../apiTypes/patientDetailsData';
 
 /**
- * This service will retrieve the country and state lists.
+ * This service will retrieve the patient details
  *
  */
 
 @Injectable()
 export class PatientViewService {
 
-    /** Innitialize CountryListService  */
+    /** Innitialize patient list */
     constructor(private _api: RestApi,
         private config: Config) { }
 
-    /** Fetch country list */
+    /** Fetch patients list */
     fetchPatients(): Observable<IPatientDetails> { 
         
         return this._api.get(this.config.apiPaths.fetchPatientDetails);

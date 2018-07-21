@@ -24,7 +24,6 @@ export class RestApi {
   /**
     *  Perform HTTP GET request
     *  @param url url of the resource to be fetched
-    *  @param headers optional custom headers
     *  @returns {Observable}
     */
   public get(url: string): Observable<any> {
@@ -34,8 +33,6 @@ export class RestApi {
   /**
     *  Perform HTTP POST request
     *  @param url url of the resource
-    *  @param body request body
-    *  @param headers optional custom headers
     *  @returns {Observable}
     */
   public post(url: string, body: Object): Observable<any> {
@@ -45,8 +42,6 @@ export class RestApi {
   /**
     *  Perform HTTP PUT request
     *  @param url url of the resource
-    *  @param body request body
-    *  @param headers optional custom headers
     *  @returns {Observable}
     */
   public put(url: string, body: Object): Observable<any> {
@@ -56,7 +51,6 @@ export class RestApi {
   /**
     *  Perform HTTP DELETE request
     *  @param url url of the resource to be deleted
-    *  @param headers optional custom headers
     *  @returns {Observable}
     */
   public delete(url: string): Observable<any> {

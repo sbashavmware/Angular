@@ -7,7 +7,7 @@ import { AuthService } from '../../../services/auth.service';
 import { ValidationService } from '../../../services/validations.service';
 
 
-
+/** registration component useful in the user profile registration */
 @Component({
   selector: 'app-registration',
   templateUrl: './registration.component.html',
@@ -15,30 +15,80 @@ import { ValidationService } from '../../../services/validations.service';
 })
 export class RegistrationComponent implements OnInit {
 
+  /** place holder to capture the alert Messages*/
   public alertMessage : string;
+
+  /** flag to capture the status of the alert visibility */
   public isAlertVisible : boolean;
+
+  /**Decorator used in the language translations  */
   @Language() lang: string;
+
+  /**Form Builder used in defining the registration forms */
   registrationForm: FormGroup;
+
+  /**place holder to capture the list of countries  */
   public countries: any;
+
+  /** place holder to capture the alert Types  */
   public alertType: string;
+
+  /**place holder to capture the selected country */
   public selectedCountry: any = null;
+
+  /** place holder to capture the  data response of countries */
   public countryApiResp: any;
+
+  /** place holder to capture the states details */
   public states : any;
+
+  /**place holder to capture the registration details of the users  */
   private updateUserDetails : any;
+
+  /**flag to capture the process of fetching state list  */
   public isStateFetching : boolean =  false;
+
+  /**place holder to capture the success message */
   public successAlertMsg : string ;
-  public isSuccessVisible : boolean;
-  public submitBtnState : any;
+
+  /**Flag used to capture the status of the registration response  */
   public regRespisFetching : boolean;
+
+  /**flag used to capture the terms agreement status */
   public termsAgreement = false;
+
+  /** place holder to capture the response of registration process */
   public saveResponse : any;
+
+  /**template reference for the submit btn */
   @ViewChild('submiterrormsgele') submiterrormsgele: any;
+
+  /**place holder for the state subscription */
+  public statesSubscription : any;
+
+  /**place holder for the country list subscription */
+  public countryListSubscription : any;
+
+  /**place holder for the save profile subscription */
+  public saveProfileSubscription : any;  
   
 
+  /**
+   * Initialize configurations on the load of the registration component 
+   * @param translation translation service for the translation of the messages
+   * @param _authenticationService Authentication Service for authentication requests
+   * @param formBuilder Angular form builder component for creating form elements
+   * @param _countryListService  country service to fetch the country list
+   * @param _stateService  state service to fetch the state list
+   */
   constructor(public translation: TranslationService,private formBuilder: FormBuilder,
     private authService:AuthService , private _countryListService: CountryListService,
     private _stateService:StateService
     ) {   
+     /**
+      * User lands to the registration form and then enters all
+      * the registration details and registers his profile
+      */
     this.registrationForm = this.formBuilder.group({
       'firstName': ['', [Validators.required]],
       'lastName': ['', [Validators.required]],
@@ -53,17 +103,27 @@ export class RegistrationComponent implements OnInit {
     });
   }
 
+   /**
+   * Initialisation life cycle hook for the registration component 
+   */ 
   ngOnInit() {
     this.getCountryList();
   }
 
+   /**
+   * used to close the language pop up modal
+   */ 
   onClose(){
     this.isAlertVisible = false;
   }
 
+
+   /**
+   * fetch the state details 
+   */ 
    fetchstates() {
     this.isStateFetching = true;
-    this._stateService.fetchStates().subscribe(data => {
+    this.statesSubscription = this._stateService.fetchStates().subscribe(data => {
       this.isStateFetching =  false;
       this.states = data.stateList;
     },
@@ -75,8 +135,12 @@ export class RegistrationComponent implements OnInit {
   );
   } 
 
+
+  /**
+   * fetch the country details
+   */ 
    getCountryList() {
-    this._countryListService.getCountryList().subscribe(data => {
+    this.countryListSubscription = this._countryListService.getCountryList().subscribe(data => {
     
       this.countryApiResp = data;
       if (this.countryApiResp.status === 'S') {
@@ -91,7 +155,9 @@ export class RegistrationComponent implements OnInit {
   } 
 
 
-
+  /**
+   * Show the error message in a alert modal
+   */ 
   showErrorMsg(errorMessage: string) {
     this.isAlertVisible = true;
     this.alertMessage = errorMessage;
@@ -103,6 +169,9 @@ export class RegistrationComponent implements OnInit {
   }
 
 
+   /**
+   * Show the success message in a alert modal
+   */ 
   showSuccessMsg(successMsg : any) {
     this.isAlertVisible = true;
     this.alertMessage = successMsg ;
@@ -114,6 +183,10 @@ export class RegistrationComponent implements OnInit {
   }
 
 
+   /**
+   * Capture all the user registration details and register the same
+   * in the system
+   */ 
   saveUserProfile() {
      this.updateUserDetails = {
        'firstName' : this.registrationForm.controls.firstName.value,
@@ -126,7 +199,7 @@ export class RegistrationComponent implements OnInit {
        'state': this.registrationForm.controls.state.value
      };
      this.regRespisFetching =  true;
-      this.authService.saveUserProfile(this.updateUserDetails).subscribe(
+      this.saveProfileSubscription = this.authService.saveUserProfile(this.updateUserDetails).subscribe(
       (success) => {
         this.saveResponse =  success;
         if(this.saveResponse.status == 'S'){
@@ -139,6 +212,13 @@ export class RegistrationComponent implements OnInit {
         this.showErrorMsg(this.translation.translate('saveErrorProfile'));
       }
     ); 
+  }
+
+   /** unsubscribe subscriptions to prevent possible memory leak*/
+   ngOnDestroy() {
+    if (this.statesSubscription) { this.statesSubscription.unsubscribe(); }
+    if (this.countryListSubscription) { this.countryListSubscription.unsubscribe(); }
+    if (this.saveProfileSubscription) { this.saveProfileSubscription.unsubscribe(); }
   }
 }
  

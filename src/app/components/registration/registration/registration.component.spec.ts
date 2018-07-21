@@ -239,6 +239,17 @@ describe('Testing registration component', () => {
      expect(component.isAlertVisible).toBe(false);
   })
 
+  it('Should unsubscribe  the subscription ', () => {
+    component.statesSubscription = of({}).subscribe();
+    component.countryListSubscription = of({}).subscribe();
+    component.saveProfileSubscription = of({}).subscribe();
+    
+    fixture.destroy();
+    expect(component.statesSubscription._subscriptions).toBeNull();
+    expect(component.countryListSubscription._subscriptions).toBeNull();
+    expect(component.saveProfileSubscription._subscriptions).toBeNull();
+ });
+
   afterEach(() => {
     fixture.destroy();
   });

@@ -117,6 +117,12 @@ describe('LoginComponent Testing', () => {
     expect(component.errorMessage).toBe(errorResponse);
   });
 
+  it('Should unsubscribe  the subscription ', () => {
+     component.authSubscription = of({}).subscribe();
+     fixture.destroy();
+     expect(component.authSubscription._subscriptions).toBeNull()
+  });
+
   afterEach(() => {
     fixture.destroy();
   });

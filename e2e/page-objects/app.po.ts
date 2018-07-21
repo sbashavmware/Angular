@@ -19,7 +19,7 @@ export class AppPage {
    * Get application title from app page header
    */
   getHeaderText() {
-    return element(by.css('my-app .title')).getText();
+    return element(by.css('patient-app .title')).getText();
   }
 
   /**

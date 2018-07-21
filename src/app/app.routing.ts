@@ -7,6 +7,9 @@ import { LoginComponent } from './components/login/login.component';
 import { RegistrationComponent } from './components/registration/registration/registration.component';
 
 
+/**
+ * Application routes definition
+ */
 export const APPROUTES: Routes = [
     {path: '', redirectTo: 'login', pathMatch: 'full'},
     {path: 'login', component: LoginComponent},
@@ -14,4 +17,8 @@ export const APPROUTES: Routes = [
     {path: 'registration', component: RegistrationComponent}
 ];
 
+
+/**
+ * Configuring the Application routes with the router module.
+ */
 export const ROUTING: ModuleWithProviders = RouterModule.forRoot(APPROUTES);

@@ -141,6 +141,14 @@ describe('AppComponent Testing ', () => {
         expect(app.locale.getCurrentLanguage()).toBe('fr');
     });
 
+    it('Should unsubscribe  the subscription ', () => {
+        app.titleSubscription = of({}).subscribe();
+        app.languageSubscription = of({}).subscribe();
+        fixture.destroy();
+        expect(app.titleSubscription._subscriptions).toBeNull()
+        expect(app.languageSubscription._subscriptions).toBeNull()
+     });
+
     afterEach(() => {
         fixture.destroy();
     });

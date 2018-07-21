@@ -158,6 +158,13 @@ describe('PatientViewComponent error Msg failure Test', () => {
     expect(component.errorDetails).toEqual(errorResponse);
   });
 
+  
+  it('Should unsubscribe  the subscription ', () => {
+    component.patientSubscription = of({}).subscribe();
+    fixture.destroy();
+    expect(component.patientSubscription._subscriptions).toBeNull()
+ });
+
   afterEach(() => {
     fixture.destroy();
   });

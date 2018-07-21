@@ -28,6 +28,11 @@ Run `npm run test-e2e` to execute the end-to-end tests via [Protractor](http://w
 
 Run `ng test -cc` to execute the code coverage.
 
+## Running Documentation
+
+Run `npm run compodoc` to execute the code coverage.
+
+
 ## Features Implemented
 
 coverage --istanbul reporter
@@ -38,6 +43,7 @@ jasmine unit test cases
 Feature Modules with lazy Loading
 Multiple instances of browsers are also supported for parallel running of unit test cases 
 Ex: Fire fox , Chrome , PhantomJs
+Documentation using CompoDoc
 
 
 

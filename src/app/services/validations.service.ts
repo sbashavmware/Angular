@@ -11,7 +11,8 @@ export class ValidationService {
     
     /**
     * Phone Number validator
-    *
+    * @param input form control field 
+    * @returns boolean form validation state
     */
     static phoneValidator(control: FormControl) {
 
@@ -22,7 +23,11 @@ export class ValidationService {
         }
     }
 
-
+    /**
+    * Email validator 
+    * @param input form control field 
+    * @returns boolean form validation state
+    */
     static emailValidator(control: FormControl) {
         if (control.value && control.value.toLowerCase().match(/[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/)) {
             return null;

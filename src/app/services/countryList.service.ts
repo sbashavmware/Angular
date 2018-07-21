@@ -6,7 +6,7 @@ import 'rxjs/add/operator/map'
 import { ICountry } from '../apiTypes/countryData';
 
 /**
- * This service will retrieve the country and state lists.
+ * This service will retrieve the country 
  *
  */
 
